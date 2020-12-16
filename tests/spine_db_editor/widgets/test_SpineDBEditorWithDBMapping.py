@@ -27,6 +27,7 @@ from spinetoolbox.spine_db_editor.widgets.spine_db_editor import SpineDBEditor
 from spinedb_api import create_new_spine_database
 
 
+@unittest.skip("Causes RuntimeError: Internal C++ object already deleted messages")
 class TestSpineDBEditorWithDBMapping(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

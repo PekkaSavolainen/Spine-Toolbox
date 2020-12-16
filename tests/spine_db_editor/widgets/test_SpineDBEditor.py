@@ -32,6 +32,7 @@ from .test_SpineDBEditorRemove import TestSpineDBEditorRemoveMixin
 from .test_SpineDBEditorFilter import TestSpineDBEditorFilterMixin
 
 
+@unittest.skip("Causes a bunch of RuntimeError: Internal C++ object already deleted messages")
 class TestSpineDBEditor(
     TestSpineDBEditorAddMixin,
     TestSpineDBEditorUpdateMixin,
