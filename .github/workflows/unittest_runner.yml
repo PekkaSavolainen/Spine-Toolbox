@@ -8,16 +8,14 @@ name: Run tests
 on:
   push
 
-defaults:
-  strategy:
-    matrix:
-      python-version: [3.6, 3.7]
-
 jobs:
 
   unit-tests-windows:
     name: Unit tests on Windows
     runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7]
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -45,6 +43,9 @@ jobs:
   unit-tests-linux:
     name: Unit tests on Ubuntu
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7]
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
