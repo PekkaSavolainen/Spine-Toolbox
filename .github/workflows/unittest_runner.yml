@@ -63,10 +63,8 @@ jobs:
         pip install coverage
         pip install codecov
     - name: Run tests
-      uses: GabrielBB/xvfb-action@v1  # Install xvfb for headless tests
-      with:
-        run:
-          QT_QPA_PLATFORM=offscreen coverage run -m unittest discover --verbose
+      run:
+        QT_QPA_PLATFORM=offscreen coverage run -m unittest discover --verbose
     - name: Run codecov
       run:
         codecov
