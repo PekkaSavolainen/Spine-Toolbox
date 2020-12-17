@@ -8,18 +8,22 @@ name: Run tests
 on:
   push
 
+defaults:
+  strategy:
+    matrix:
+      python-version: [3.6, 3.7]
+
 jobs:
 
   unit-tests-windows:
-    name: Unit tests on Windows (Python 3.7)
+    name: Unit tests on Windows
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.7
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: ${{ matrix.python-version }}
     - name: Display Python version
       run:
          python -c "import sys; print(sys.version)"
@@ -41,9 +45,6 @@ jobs:
   unit-tests-linux:
     name: Unit tests on Ubuntu
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7]
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
