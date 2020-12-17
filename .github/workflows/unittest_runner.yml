@@ -1,6 +1,6 @@
 # GitHub Action to run unittests
 
-name: Unittest-Runner
+name: Run tests
 
 # Run workflow at every 30th minute past every hour
 # from 10 through 18 on every day-of-week from Monday
@@ -12,8 +12,8 @@ on:
 
 jobs:
 
-  build-windows:
-    name: unit tests on Windows (Python 3.7)
+  unit-tests-windows:
+    name: Unit tests on Windows (Python 3.7)
     runs-on: windows-latest
 
     steps:
@@ -39,9 +39,9 @@ jobs:
     - name: Run codecov
       run:
         codecov
-  
-  build-linux:
-    name: unit tests on Ubuntu (Python 3.7)
+
+  unit-tests-linux:
+    name: Unit tests on Ubuntu (Python 3.7)
     runs-on: ubuntu-latest
 
     steps:
