@@ -14,7 +14,7 @@ However, there are tutorials for SpineOpt in its documentation:
 
 - `Simple system <https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/simple-system>`_
 - `Two hydro plants <https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/tutorialTwoHydro>`_
-- `Case study A5 from Spine project <https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/case_study_a5>`
+- `Case study A5 from Spine project <https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/case_study_a5>`_
 
 There is also a getting started tutorial for IRENA FlexTool, which also uses Spine Toolbox as an interface:
 
