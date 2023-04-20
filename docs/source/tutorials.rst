@@ -8,14 +8,9 @@
 Tutorials
 *********
 
-Welcome to the Spine Toolbox's tutorials page.
-The following tutorials are available:
+Welcome to the Spine Toolbox's tutorials page. There is no Spine Toolbox specific tutorial available at the moment. However, there are tutorials for SpineOpt in its documentation:
 
-.. toctree::
-   :titlesonly:
-
-
-   simple_system.rst
-   tutorialTwoHydro.rst
-   case_study_a5.rst
+   https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/simple-system
+   https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/tutorialTwoHydro
+   https://spine-tools.github.io/SpineOpt.jl/latest/tutorial/case_study_a5
 
