@@ -25,7 +25,7 @@ from spinetoolbox.version import __version__, __version_info__
 
 project = "Spine Toolbox"
 author = "Spine project consortium"
-copyright = "2017-2021 {}".format(author)
+copyright = "2017- {}".format(author)
 
 
 # The short X.Y version
