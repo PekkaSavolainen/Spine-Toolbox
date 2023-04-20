@@ -19,7 +19,6 @@ please see the :ref:`Contribution Guide`. The last section contains the complete
    :caption: Contents:
 
    getting_started
-   how_to_run_spineopt
    tutorials
    setting_up
    main_window
@@ -27,12 +26,12 @@ please see the :ref:`Contribution Guide`. The last section contains the complete
    tool_specification_editor
    executing_projects
    execution_modes
-   settings
    Spine database editor <spine_db_editor/index>
    plotting
    parameter_value_editor
    metadata_description
    data_import_export
+   Settings dialog <settings>
    spine_engine_server
    terminology
    dependencies
