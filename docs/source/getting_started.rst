@@ -30,7 +30,7 @@ Getting Started
 
 Welcome to the Spine Toolbox's getting started guide.
 In this guide you will learn two ways of running a `"Hello, World!" program
-<https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_ on Spine Toolbox.
+<https://en.wikipedia.org/wiki/%22Hello,_World!%22_program>`_ on **Spine Toolbox**.
 If you need help on how to work with **SpineOpt.jl** using Spine Toolbox, see SpineOpt documentation: 
 https://spine-tools.github.io/SpineOpt.jl/latest/index.html.
 
