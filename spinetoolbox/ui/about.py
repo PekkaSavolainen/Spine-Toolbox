@@ -28,8 +28,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QLabel, QSizePolicy, QSpacerItem, QTextBrowser,
     QToolButton, QVBoxLayout, QWidget)
-from spinetoolbox import resources_icons_rc
-from spinetoolbox import resources_logos_rc
+from . import resources_icons_rc
+from . import resources_logos_rc
 
 class Ui_Form(object):
     def setupUi(self, Form):
