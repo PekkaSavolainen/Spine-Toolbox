@@ -17,18 +17,8 @@ import sys
 import os
 from pathlib import Path
 
-# NOTE: All required Python package versions are in setup.cfg
-LATEST_PROJECT_VERSION = 11
-
 # For the Add/Update SpineOpt wizard
 REQUIRED_SPINE_OPT_VERSION = "0.6.9"
-
-# Invalid characters for directory names
-# NOTE: "." is actually valid in a directory name but this is
-# to prevent the user from creating directories like /..../
-INVALID_CHARS = ["<", ">", ":", "\"", "/", "\\", "|", "?", "*", "."]
-# Invalid characters for file names
-INVALID_FILENAME_CHARS = ["<", ">", ":", "\"", "/", "\\", "|", "?", "*"]
 
 # Paths to application, configuration file, default project and work dirs, and documentation index page
 _frozen = getattr(sys, "frozen", False)

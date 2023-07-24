@@ -20,7 +20,7 @@ import json
 import copy
 from PySide6.QtWidgets import QFileDialog, QMessageBox
 from spine_engine.utils.serialization import serialize_path, deserialize_path
-from .config import LATEST_PROJECT_VERSION, PROJECT_FILENAME
+from spine_engine.project.project import LATEST_PROJECT_VERSION, PROJECT_FILENAME
 from .helpers import home_dir
 from .project_settings import ProjectSettings
 

@@ -24,6 +24,7 @@ from spine_engine.utils.helpers import (
     resolve_conda_executable,
     get_julia_env,
 )
+from spine_engine.project.project import AppSettingsKey as ProjectKeys
 from .notification import Notification
 from .install_julia_wizard import InstallJuliaWizard
 from .add_up_spine_opt_wizard import AddUpSpineOptWizard
@@ -692,7 +693,7 @@ class SettingsWidget(SpineDBEditorSettingsMixin, SettingsWidgetBase):
         show_exit_prompt = int(self._qsettings.value("appSettings/showExitPrompt", defaultValue="2"))
         save_at_exit = self._qsettings.value("appSettings/saveAtExit", defaultValue="prompt")
         datetime = int(self._qsettings.value("appSettings/dateTime", defaultValue="2"))
-        delete_data = int(self._qsettings.value("appSettings/deleteData", defaultValue="0"))
+        delete_data = int(self._qsettings.value("appSettings/" + ProjectKeys.DELETE_REMOVED_ITEM_DATA, defaultValue="0"))
         custom_open_project_dialog = self._qsettings.value("appSettings/customOpenProjectDialog", defaultValue="true")
         smooth_zoom = self._qsettings.value("appSettings/smoothZoom", defaultValue="false")
         color_toolbar_icons = self._qsettings.value("appSettings/colorToolbarIcons", defaultValue="false")
@@ -847,7 +848,7 @@ class SettingsWidget(SpineDBEditorSettingsMixin, SettingsWidgetBase):
         datetime = str(self.ui.checkBox_datetime.checkState().value)
         self._qsettings.setValue("appSettings/dateTime", datetime)
         delete_data = str(self.ui.checkBox_delete_data.checkState().value)
-        self._qsettings.setValue("appSettings/deleteData", delete_data)
+        self._qsettings.setValue("appSettings/" + ProjectKeys.DELETE_REMOVED_ITEM_DATA, delete_data)
         custom_open_project_dial = "true" if self.ui.checkBox_custom_open_project_dialog.checkState().value else "false"
         self._qsettings.setValue("appSettings/customOpenProjectDialog", custom_open_project_dial)
         smooth_zoom = "true" if self.ui.checkBox_use_smooth_zoom.checkState().value else "false"

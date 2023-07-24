@@ -24,8 +24,8 @@ from spine_engine import SpineEngineState
 from spine_engine.exception import EngineInitFailed
 from spine_engine.load_project_items import load_item_specification_factories
 from spine_engine.utils.serialization import deserialize_path
+from spine_engine.project.project import LATEST_PROJECT_VERSION
 from .project_item.logging_connection import HeadlessConnection
-from .config import LATEST_PROJECT_VERSION
 from .helpers import (
     make_settings_dict_for_engine,
     plugins_dirs,

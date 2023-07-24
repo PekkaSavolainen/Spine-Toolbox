@@ -22,11 +22,10 @@ import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from PySide6.QtWidgets import QApplication
-
-from spinetoolbox.project_settings import ProjectSettings
+from spine_engine.project.project import LATEST_PROJECT_VERSION
+from spine_engine.project.project_settings import ProjectSettings
 from spinetoolbox.project_upgrader import ProjectUpgrader
 from spinetoolbox.resources_icons_rc import qInitResources
-from spinetoolbox.config import LATEST_PROJECT_VERSION
 from .mock_helpers import create_toolboxui, clean_up_toolbox
 
 

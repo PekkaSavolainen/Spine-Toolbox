@@ -35,7 +35,16 @@ from spine_engine.utils.helpers import (
 )
 from spine_engine.utils.serialization import deserialize_path, serialize_path
 from spine_engine.server.util.zip_handler import ZipHandler
-from .project_settings import ProjectSettings
+from spine_engine.project.project_settings import ProjectSettings
+from spine_engine.project.project import (
+    INVALID_CHARS,
+    LATEST_PROJECT_VERSION,
+    PROJECT_FILENAME,
+    PROJECT_LOCAL_DATA_DIR_NAME,
+    PROJECT_LOCAL_DATA_FILENAME,
+    SPECIFICATION_LOCAL_DATA_FILENAME,
+    PROJECT_ZIP_FILENAME,
+)
 from .server.engine_client import EngineClient
 from .metaobject import MetaObject
 from .helpers import (
@@ -51,14 +60,7 @@ from .helpers import (
 )
 from .project_upgrader import ProjectUpgrader
 from .config import (
-    LATEST_PROJECT_VERSION,
-    PROJECT_FILENAME,
-    INVALID_CHARS,
-    PROJECT_LOCAL_DATA_DIR_NAME,
-    PROJECT_LOCAL_DATA_FILENAME,
     FG_COLOR,
-    SPECIFICATION_LOCAL_DATA_FILENAME,
-    PROJECT_ZIP_FILENAME,
 )
 from .project_commands import SetProjectDescriptionCommand
 from .spine_engine_worker import SpineEngineWorker
