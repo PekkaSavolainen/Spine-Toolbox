@@ -2510,3 +2510,10 @@ class ToolboxUI(QMainWindow):
             message (str): formatted message
         """
         self.ui.textBrowser_eventlog.add_log_message(item_name, filter_id, message)
+
+    def open_from_startbox(self, path_to_project):
+        print("open_from_startbox executed")
+        # path_to_project = "C:\\Users\ErmannoLoCascio\Desktop\eScience - Mopo\spine_projects\Simple Tutorial 4"
+
+        restoration_result = self.restore_project(path_to_project)
+        print("Restoration result:", restoration_result)
