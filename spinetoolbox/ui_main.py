@@ -117,8 +117,6 @@ from spinetoolbox.server.engine_client import EngineClient, RemoteEngineInitFail
 from .kernel_fetcher import KernelFetcher
 
 
-
-
 class ToolboxUI(QMainWindow):
     """Class for application main GUI functions."""
 
@@ -2514,4 +2512,4 @@ class ToolboxUI(QMainWindow):
         self.ui.textBrowser_eventlog.add_log_message(item_name, filter_id, message)
 
     def open_from_startbox(self, path_to_project):
-        restoration_result = self.restore_project(path_to_project)
+        self.restore_project(path_to_project)

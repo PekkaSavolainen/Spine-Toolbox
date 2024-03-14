@@ -36,6 +36,8 @@ from .version import __version__
 from .headless import headless_main, Status
 from .helpers import pyside6_version_check
 
+from spinetoolbox.startup_box import StartUpMainWindow
+
 
 def main():
     """Creates main window GUI and starts main event loop."""
@@ -63,6 +65,10 @@ def main():
         logging.warning("Could not load fonts from resources file. Some icons may not render properly.")
     window = ToolboxUI()
     window.show()
+
+    startbox = StartUpMainWindow()
+    startbox.show()
+
     QTimer.singleShot(0, lambda: window.init_project(args.project))
     # Enter main event loop and wait until exit() is called
     return_code = app.exec()
