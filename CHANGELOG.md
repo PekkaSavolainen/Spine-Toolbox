@@ -3,14 +3,58 @@ All **notable** changes to this project are documented here.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## [0.7.2]
+## [Unreleased]
+
+### Added
+- New context menu action (Select superclass) for entity class items in the entity tree.
+- Added Tool Specification type (Python, Gams, etc.) icons on Design View.
+- There is now a new filter type, Alternative filter available in Link properties.
+  Unlike scenario filters, the execution is not parallelized.
+  Instead, a successor item sees parameter values of all selected alternatives.
+  Because of this behavior,
+  alternative filters cannot be used at the same time with scenario filters.
+  Link properties tab has a combo box that lets one choose which filter type to use.
+
+### Changed
+
+#### Spine data structure
+
+Many parts of the Spine data structure have been redesigned.
+
+- *Entities* have replaced objects and relationships.
+  Zero-dimensional entities correspond to objects while multidimensional entities replace the former relationships.
+  Unlike relationships, the *elements* of multidimensional entities can now be other multidimensional entities.
+- Simple inheritance is now supported by *superclasses*.
+- Tools, features and methods have been removed.
+  The functionality that was previously implemented using the is_active parameter
+  has been replaced by *entity alternatives*.
+  Entity classes have a default setting for the entity alternative called *active by default*.
+
+#### Miscellaneous changes
+
+- "Rubber band" selection of items in Design and Graph views is now done with **left mouse button**
+  (no need to press Ctrl anymore). The views can be dragged around by holding the **right mouse button**.
+- You can now select a different Julia executable & project or Julia kernel for each Tool spec.
+  This overrides the global setting from Toolbox Settings.
+- Headless mode now supports remote execution (see 'python -m spinetoolbox --help')
+
+### Deprecated
+
+### Removed
+- Project dock widget
+
+### Fixed
+
+### Security
+
+## [0.7.2] - 2023-12-04
 
 ### Added
 
 - Data Connection items now support schemas in database references
 - Importer Specification Editor now supports database schemas
 
-## [0.7.1]
+## [0.7.1] - 2023-10-06
 
 ### Added
 
@@ -23,6 +67,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
   the alternatives in the Scenario Tree
 - Fixed a bug with time series plots
 - Fixed issues with Pivot table
+
 
 ## [0.7.0] - 2023-08-25
 
