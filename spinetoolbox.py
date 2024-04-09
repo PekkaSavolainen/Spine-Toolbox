@@ -10,11 +10,7 @@
 # this program. If not, see <http://www.gnu.org/licenses/>.
 ######################################################################################################################
 
-"""
-Starts Spine Toolbox.
-"""
-
-
+"""Starts Spine Toolbox."""
 if __name__ == "__main__":
     import sys
     from spinetoolbox.main import main
